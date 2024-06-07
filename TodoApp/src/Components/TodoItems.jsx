@@ -7,6 +7,7 @@ const TodoItems = ({ todoItems, handleDeleteItem }) => {
 			<div className={styles.itemsContainer}>
 				{todoItems.map((item) => (
 					<TodoItem
+						key={item.name}
 						todoName={item.name}
 						todoDate={item.dueDate}
 						handleDeleteItem={handleDeleteItem}

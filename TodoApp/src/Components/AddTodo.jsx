@@ -1,9 +1,10 @@
 import { useState } from "react";
 import "./AddTodo.css";
+import { MdAddCircleOutline } from "react-icons/md";
 
 function AddTodo({ onNewItem }) {
-	const [todoName, setTodoName] = useState();
-	const [dueDate, setDueDate] = useState();
+	const [todoName, setTodoName] = useState("");
+	const [dueDate, setDueDate] = useState("");
 
 	const handleNameChange = (e) => {
 		setTodoName(e.target.value);
@@ -39,7 +40,7 @@ function AddTodo({ onNewItem }) {
 						className="btn btn-success kg-button"
 						onClick={handleAddClicked}
 					>
-						Add
+						<MdAddCircleOutline />
 					</button>
 				</div>
 			</div>
